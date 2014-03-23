@@ -9,3 +9,5 @@ More about inverted index at: [Inverted Index](http://en.wikipedia.org/wiki/Inve
 ## Example
 
 For running the example put 'example' directory at web server, open file file 'index.php' and alter folder and files paths at variables: $FOLDER_PATH and $INVERTED_INDEX_PATH.
+
+![alt text](https://raw.githubusercontent.com/danieltnaves/QueryProcessor/master/screenshot.png "Example screenshot")
