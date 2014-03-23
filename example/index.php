@@ -3,8 +3,8 @@ set_time_limit(0);
 require_once ('../QueryProcessor.php');
 
 //----------------Edit this lines----------------------------------
-$FOLDER_PATH = 'C:\xampp\htdocs\lab04\example\files';
-$INVERTED_INDEX_PATH = 'C:\xampp\htdocs\lab04\example\invertedIndex.dat';
+$FOLDER_PATH = 'C:\xampp\htdocs\QueryProcessor\example\files';
+$INVERTED_INDEX_PATH = 'C:\xampp\htdocs\QueryProcessor\example\invertedIndex.dat';
 //----------------Edit this lines----------------------------------
 
 //compare function to use on uasort
