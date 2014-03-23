@@ -49,7 +49,6 @@ if (isset($_POST['and']) || isset($_POST['or'])) {
 	<?php if (!empty($fileList)) : ?>
 	<?php 
 	uasort($fileList, 'compareSize'); 
-	$FOLDER_PATH = 'C:\xampp\htdocs\lab04\example\files';
 	$files = QueryProcessor::listDirectoryFiles($FOLDER_PATH);
 	?>
 	<div class="resultBox">
