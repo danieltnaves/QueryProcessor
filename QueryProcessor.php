@@ -12,11 +12,11 @@
 class QueryProcessor {
 
 	/**
-     * List all files inside directory and return them in array.
-     *
-	 * @param string Directory path
-     * @return array returns the file list
-     */
+	* List all files inside directory and return them in array.
+	*
+	* @param string Directory path
+	* @return array returns the file list
+	*/
 	public static function listDirectoryFiles($directoryPath) {
 		if ($handle = opendir($directoryPath)) {
 			$files = array();
@@ -30,12 +30,12 @@ class QueryProcessor {
 	}
 
 	/**
-     * Count same words in a file list and returns an array by occurrence order.
-     *
-	 * @param array File list
-	 * @param string File path
-     * @return array returns the word list by occurrence order
-     */
+	* Count same words in a file list and returns an array by occurrence order.
+	*
+	* @param array File list
+	* @param string File path
+	* @return array returns the word list by occurrence order
+	*/
 	public static function countSameWords($fileList, $filePath) {
 		$content = '';
 		$nContent = array();
@@ -74,12 +74,12 @@ class QueryProcessor {
 	}
 
 	/**
-     * Remove the first array element and maintain associative index. Function array_kshift remove
-     * associative index and sets a integer value.
-     *
-	 * @param array associative array
-     * @return array returns an integer index array
-     */
+	* Remove the first array element and maintain associative index. Function array_kshift remove
+	* associative index and sets a integer value.
+	*
+	* @param array associative array
+	* @return array returns an integer index array
+	*/
 	public static function array_kshift(&$arr) {
 		list($k) = array_keys($arr);
 		$r  = array($k => $arr[$k]);
@@ -88,12 +88,12 @@ class QueryProcessor {
 	}
 
 	/**
-     * Makes intersection using the words position.
-     *
-	 * @param array word with positions
-	 * @param array word with positions
-     * @return array returns intersection between two words
-     */
+	* Makes intersection using the words position.
+	*
+	* @param array word with positions
+	* @param array word with positions
+	* @return array returns intersection between two words
+	*/
 	public static function positionalIntersection($p1, $p2) {
 		//removes a document list that aren't in both words
 		$keys = array_keys(array_intersect_key($p1, $p2));
@@ -110,13 +110,13 @@ class QueryProcessor {
 	}
 
 	/**
-     * Receives a query and find statements at inverted index.
-     *
-	 * @param string words sequences separated by white spaces
-	 * @param array inverted index with words
-	 * @param string 'and' for conjunctive queries and 'or' for disjunctive queries
-     * @return array returns a file list with a matched query
-     */
+	* Receives a query and find statements at inverted index.
+	*
+	* @param string words sequences separated by white spaces
+	* @param array inverted index with words
+	* @param string 'and' for conjunctive queries and 'or' for disjunctive queries
+	* @return array returns a file list with a matched query
+	*/
 	public static function processQuery($query, $invertedIndex, $type) {
 		$queryArray = explode(' ', $query);
 		$result = array();
