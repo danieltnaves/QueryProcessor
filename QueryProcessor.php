@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * This class has methods to manipulate files and directories.
  * Another functionality is to extract words from files, count words
