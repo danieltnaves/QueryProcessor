@@ -1,4 +1,4 @@
-Query Processor
+## Query Processor
 
 A query processor class that extract words from hard disk files, creates a inverted index with words found and calculates their positions and count ocurrences.
 
